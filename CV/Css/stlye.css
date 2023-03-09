@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body.dark{
+  background: #848c99;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.container .left_Side {
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profileText h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.profileText h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+/* Modo Oscuro */
+.switch{
+  background: #000000;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+.switch::after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 20%);
+}
+.switch.active{
+  background: #362c2c;
+  color: #050303;
+}
+.switch.active::after{
+  right: 0;
+  left: unset;
+}
+.switch span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+button{
+  appearance: auto;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+}
+
+.bx{
+  font-weight: 400;
+  font-family: "Font Awesome 4.7";
+  display: var(--bx, inline-block);
+  font-style: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.bx-sun::before{
+content: "\f185";
+}
+
+.bxs-moon::before{
+  content: "\f186";
+}
+
+.bxs-moon{
+  font-weight: 400;
+}
+
+i{
+  font-style: italic;
+}
+
+body.dark .container {    
+  transition: .5s ease all;
+  background:  #1f1f1f;
+}
+body.dark .container .left_Side {
+  transition: .5s ease all;
+  background: #000000;   
+}
+body.dark .contact ul li .icon {
+  transition: .5s ease all;
+  color: #ffffff;
+}
+body.dark .contact ul li span {
+  transition: .5s ease all;
+  color: #ffffff;
+}
+body.dark .contact ul li a {
+  transition: .5s ease all;
+  color: #ffffff;
+}
+body.dark .contacteducation h5 {
+  transition: .5s ease all;
+  color: #ffffff;
+}
+body.dark .contacteducation h4 {
+  transition: .5s ease all;
+  color: #ffffff;
+}
+body.dark .contacteducation.language .percent {
+  transition: .5s ease all;
+  background: #ffffff;
+}
+body.dark .contacteducation.language .percent div {
+  transition: .5s ease all;
+  background: #A6ACAF;
+}
+----------------------------------------------------
+body.dark .container .right_Side {
+  transition: .5s ease all;
+}
+body.dark .title2 {
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark p{
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark .about .box .year_company h5 {
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark .about .box .text h4 {
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark .skills .box h4 {
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark .skills .box .percent {
+  transition: .5s ease all;
+  background: #ffffff;
+}
+body.dark .skills .box .percent div {
+  transition: .5s ease all;
+  background: #A6ACAF;
+}
+body.dark .interest ul li {
+  transition: .5s ease all;
+  color: #000000;
+}
+body.dark .interest ul li .fa {
+  transition: .5s ease all;
+  color: #000000;
+}
+
+/*  */
+.contact {
+  padding-top: 40px;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contact ul {
+  position: relative;
+}
+.contact ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contact ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+.contact ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+.contacteducation li {
+  margin-bottom: 15px;
+  list-style: none;
+  color: #fff;
+}
+.contacteducation h5 {
+  color: #03a9f4;
+  font-weight: 500;
+}
+.contacteducation h4:nth-child(2) {
+  color: #fff;
+  font-weight: 500;
+}
+.contacteducation h4 {
+  color: #fff;
+  font-weight: 300;
+}
+.contacteducation.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #fff;
+  display: block;
+  margin-top: 5px;
+}
+.contacteducation.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.container .right_Side {
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
+.about {
+  margin-bottom: 50px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+p {
+  color: #333;
+}
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.about .box .year_company {
+  min-width: 150px;
+}
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-size: 16px;
+}
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest ul li .fa {
+  color: #03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about .box {
+    flex-direction: column;
+  }
+  .about .box .year_company {
+    margin-bottom: 5px;
+  }
+  .interest ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills .box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
